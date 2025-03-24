@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battman125 - Rust Профиль</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a;
+            color: white;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),
+                            url('https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/1263950/ebc5939416c91ebfdcd609339b8326d6fbfb42ca.gif');
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            border: 3px solid #cc0000;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 20px 0;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #cc0000, #660000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .content {
+            max-width: 800px;
+            padding: 20px;
+            margin: 20px;
+            background: rgba(20, 20, 20, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(204,0,0,0.3);
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 15px 0;
+            color: #cccccc;
+        }
+
+        .highlight {
+            color: #cc0000;
+            font-weight: bold;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            width: 100%;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: rgba(50,50,50,0.7);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(45deg, #cc0000, #990000);
+            width: var(--progress);
+            transition: width 1s ease-in-out;
+            position: relative;
+        }
+
+        .progress-label {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-weight: bold;
+            z-index: 2;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        .skill-category {
+            font-size: 0.9em;
+            color: #cc0000;
+            margin-bottom: 5px;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .logo {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .content {
+                margin: 10px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/1263950/ebc5939416c91ebfdcd609339b8326d6fbfb42ca.gif" alt="Лого" class="logo">
+    <h1>Battman125 - Rust мастер</h1>
+    
+    <div class="content">
+        <p><span class="highlight">Rust философия:</span> Настоящий выживальщик не фармит - он добывает ресурсы интеллектом и стратегией!</p>
+        
+        <div class="stats-container">
+            <div class="skill-item">
+                <div class="skill-category">Ресурсы</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="--progress: 0%"></div>
+                    <span class="progress-label">Фарм 0%</span>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-category">Тактика</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="--progress: 100%"></div>
+                    <span class="progress-label">Сигма 100%</span>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-category">Бой</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="--progress: 100%"></div>
+                    <span class="progress-label">Комбатер 100%</span>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-category">Время</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="--progress: 99%"></div>
+                    <span class="progress-label">Двушка тайм 99%</span>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-category">Строительство</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="--progress: 1%"></div>
+                    <span class="progress-label">Строитель 1%</span>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-category">Инженерия</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="--progress: 1%"></div>
+                    <span class="progress-label">Электрик 1%</span>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-category">Экономика</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="--progress: 99%"></div>
+                    <span class="progress-label">Фермер 99%</span>
+                </div>
+            </div>
+        </div>
+
+        <p><span class="highlight">Стратегия:</span> Максимум эффективности - минимум рутины. Зачем фармить, когда можно перехватить чужой груз?</p>
+        <p><span class="highlight">Философия:</span> Лучшая база - чужая база. Лучший ресурс - чужой ресурс!</p>
+        <p><span class="highlight">Правила выживания:</span> 1. Никакого фарма 2. Только стратегия 3. Все ресурсы должны быть "найдены"</p>
+    </div>
+</body>
+</html>
